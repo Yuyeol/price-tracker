@@ -1,16 +1,18 @@
-import ProductItem from "@/components/home/product-item";
+import Products from "@/components/home/products";
+import ToolBar from "@/components/home/products/tool-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <ProductItem />
+      <ToolBar />
+      <Products />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
+    flex: 1,
   },
 });

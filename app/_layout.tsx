@@ -25,6 +25,13 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="product/create"
+        options={{
+          title: "상품 등록",
+          presentation: "modal",
+        }}
+      />
       <Stack.Screen name="+not-found" />
     </Stack>
   );

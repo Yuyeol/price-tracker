@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 
-// 상품 데이터 타입 정의
 interface IProduct {
   id: number;
   brand: string;
@@ -12,7 +11,6 @@ interface IProduct {
   updatedAt: string;
 }
 
-// 샘플 데이터
 const productList: IProduct[] = [
   {
     id: 1,
@@ -71,7 +69,7 @@ const productList: IProduct[] = [
   },
 ];
 
-export default function ProductItem() {
+export default function Products() {
   // 할인율 계산 함수
   const calculateDiscount = (original: number, current: number) => {
     return Math.round(((original - current) / original) * 100);
@@ -127,8 +125,8 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   thumbnail: {
-    width: 120,
-    height: 120,
+    width: 80,
+    height: 80,
     borderRadius: 6,
   },
   contentContainer: {
@@ -142,12 +140,12 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   productName: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
     marginVertical: 4,
   },
   description: {
-    fontSize: 14,
+    fontSize: 12,
     color: "#666666",
     marginBottom: 8,
   },
@@ -157,19 +155,19 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   originalPrice: {
-    fontSize: 14,
+    fontSize: 12,
     color: "#999999",
     textDecorationLine: "line-through",
     marginRight: 8,
   },
   currentPrice: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
     color: "#FF3B30",
     marginRight: 8,
   },
   discountRate: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
     color: "#FF3B30",
   },
